@@ -3,16 +3,7 @@ from collections import defaultdict
 from os import system
 import subprocess
 
-try:
-    import netifaces
-except ModuleNotFoundError as e:
-    system("pip install netifaces")
-    import netifaces
-try:
-    from pyroute2 import IPRoute
-except ModuleNotFoundError as e:
-    system("pip install pyroute2")
-    from pyroute2 import IPRoute 
+ 
     
 me = subprocess.getoutput("whoami")
 me = me.strip()
